@@ -1,0 +1,5 @@
+psutil
+requests
+matplotlib
+numpy
+scikit-learn

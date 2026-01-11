@@ -1,0 +1,29 @@
+192.0.2.45 - - [09/Jan/2026:12:10:21 +0000] "GET /login.php?username=admin' OR '1'='1'-- HTTP/1.1" 200 532
+192.0.2.45 - - [09/Jan/2026:12:10:21 +0000] "GET /login.php?username=admin' OR '1'='1'-- HTTP/1.1" 200 532
+203.0.113.77 - - [09/Jan/2026:12:12:40 +0000] "POST /upload.php HTTP/1.1" 500 1042
+203.0.113.77 - - [09/Jan/2026:12:12:40 +0000] "POST /upload.php HTTP/1.1" 500 1042
+10.10.10.5 - - [09/Jan/2026:12:14:22 +0000] "GET /search?q=<script>alert('xss')</script> HTTP/1.1" 200 345
+45.83.65.201 - - [09/Jan/2026:12:15:50 +0000] "GET /index.html HTTP/1.1" 200 512
+203.0.113.12 - - [09/Jan/2026:12:16:40 +0000] "GET /login.php?user=%2527%2520OR%25201%253D1-- HTTP/1.1" 200 488
+2026-01-11 10:01:12 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:01:13 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:01:14 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:01:15 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:01:16 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:01:17 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:05:44 45.133.192.77 GET /login.php?user=admin'-- HTTP/1.1 500
+2026-01-11 10:05:45 45.133.192.77 GET /login.php?user=admin' OR '1'='1 HTTP/1.1 500
+2026-01-11 10:05:46 45.133.192.77 GET /index.php?id=1 UNION SELECT username,password FROM users HTTP/1.1 500
+2026-01-11 10:09:01 103.21.244.0 GET /../../etc/passwd HTTP/1.1 403
+2026-01-11 10:09:02 103.21.244.0 GET /../../windows/system32/config HTTP/1.1 403
+2026-01-11 10:11:22 172.67.88.9 GET /search?q=<script>alert(1)</script> HTTP/1.1 200
+2026-01-11 10:11:23 172.67.88.9 GET /comment?msg=<img src=x onerror=alert(1)> HTTP/1.1 200
+2026-01-11 10:15:50 185.234.219.12 POST /api/update HTTP/1.1 200
+2026-01-11 10:15:51 185.234.219.12 POST /api/update HTTP/1.1 200
+2026-01-11 10:15:52 185.234.219.12 POST /api/update HTTP/1.1 200
+2026-01-11 09:59:01 10.0.0.5 GET /index.html HTTP/1.1 200
+2026-01-11 10:01:12 192.168.1.10 GET /login HTTP/1.1 401
+2026-01-11 10:05:44 45.133.192.77 GET /login.php?user=admin'-- HTTP/1.1 500
+2026-01-11 10:09:01 103.21.244.0 GET /../../etc/passwd HTTP/1.1 403
+2026-01-11 10:11:22 172.67.88.9 GET /search?q=<script>alert(1)</script> HTTP/1.1 200
+2026-01-11 10:15:50 185.234.219.12 POST /api/update HTTP/1.1 200

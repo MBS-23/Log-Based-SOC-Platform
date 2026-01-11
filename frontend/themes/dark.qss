@@ -1,0 +1,234 @@
+/* =========================================================
+   LOG SOC PLATFORM — DARK THEME (ENTERPRISE / SOC-GRADE)
+   =========================================================
+   ✔ Sidebar separation (Qt-safe)
+   ✔ Active indicator bar
+   ✔ Button hierarchy
+   ✔ Table clarity
+   ✔ Performance safe
+   ✔ EXE compatible
+   ========================================================= */
+
+/* ================= GLOBAL ================= */
+* {
+    font-family: "Segoe UI", "Inter", "Arial";
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+QWidget {
+    background-color: #0b1220;
+}
+
+QMainWindow {
+    background-color: #0b1220;
+}
+
+/* ================= LABELS ================= */
+QLabel {
+    color: #e5e7eb;
+}
+
+QLabel#Title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* ================= SIDEBAR ================= */
+QWidget#Sidebar {
+    background-color: #020617;
+    border-right: 2px solid #2563eb; /* 🔥 EDGE INDICATOR (Qt-safe) */
+}
+
+QLabel#SidebarTitle {
+    color: #e5e7eb;
+    letter-spacing: 1px;
+}
+
+QLabel#SidebarFooter {
+    font-size: 9px;
+    color: #6b7280;
+}
+
+QFrame#SidebarSeparator {
+    background-color: #1e293b;
+    min-height: 1px;
+}
+
+/* ================= SIDEBAR BUTTONS ================= */
+QPushButton#SidebarButton {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+
+    padding: 8px 12px 8px 40px; /* icon + text spacing */
+    color: #cbd5f5;
+
+    border-radius: 6px;
+}
+
+QPushButton#SidebarButton:hover {
+    background-color: #1e293b;
+}
+
+QPushButton#SidebarButton:checked {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: bold;
+
+    border-left: 4px solid #2563eb; /* 🔥 ACTIVE INDICATOR */
+}
+
+/* ================= BUTTONS ================= */
+QPushButton {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    padding: 6px 14px;
+}
+
+QPushButton:hover {
+    background-color: #1f2937;
+    border: 1px solid #2563eb;
+}
+
+QPushButton:pressed {
+    background-color: #020617;
+}
+
+QPushButton:disabled {
+    background-color: #020617;
+    color: #64748b;
+    border: 1px solid #020617;
+}
+
+/* Primary */
+QPushButton#PrimaryButton {
+    background-color: #2563eb;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+QPushButton#PrimaryButton:hover {
+    background-color: #1d4ed8;
+}
+
+/* Danger */
+QPushButton#DangerButton {
+    background-color: #7f1d1d;
+    border: none;
+    color: white;
+}
+
+QPushButton#DangerButton:hover {
+    background-color: #991b1b;
+}
+
+/* ================= INPUTS ================= */
+QLineEdit,
+QTextEdit,
+QPlainTextEdit {
+    background-color: #020617;
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+QLineEdit:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus {
+    border: 1px solid #2563eb;
+}
+
+/* ================= COMBOBOX ================= */
+QComboBox {
+    background-color: #020617;
+    border: 1px solid #1f2937;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #020617;
+    border: 1px solid #1f2937;
+    selection-background-color: #2563eb;
+}
+
+/* ================= TABLES ================= */
+QTableView,
+QTreeView {
+    background-color: #020617;
+    border: 1px solid #1f2937;
+    gridline-color: #1f2937;
+}
+
+QHeaderView::section {
+    background-color: #020617;
+    padding: 7px;
+    border: 1px solid #1f2937;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+QTableView::item,
+QTreeView::item {
+    padding: 6px;
+    border-bottom: 1px solid #1f2937;
+}
+
+QTableView::item:selected,
+QTreeView::item:selected {
+    background-color: #1d4ed8;
+    color: white;
+}
+
+/* ================= SCROLLBAR ================= */
+QScrollBar:vertical {
+    background: #020617;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background: #334155;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #475569;
+}
+
+/* ================= STATUS BAR ================= */
+QStatusBar {
+    background-color: #020617;
+    border-top: 1px solid #1f2937;
+}
+
+/* ================= GROUP BOX ================= */
+QGroupBox {
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+QGroupBox::title {
+    padding: 0 6px;
+}
+
+/* ================= MESSAGE BOX ================= */
+QMessageBox {
+    background-color: #020617;
+}
+
+QMessageBox QLabel {
+    color: #e5e7eb;
+}
+
+/* ================= TOOLTIP ================= */
+QToolTip {
+    background-color: #020617;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+    padding: 4px;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Log-Based SOC Platform – Project Information</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      width: 260px;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #020617, #020617);
+      box-shadow: 4px 0 20px rgba(0,0,0,.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      transition: width 0.3s ease;
+    }
+
+    .sidebar.collapsed {
+      width: 72px;
+    }
+
+    .logo-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #2563eb;
+      background: #fff;
+      margin-bottom: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar.collapsed .logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2.5rem;
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .section-card {
+      background: var(--bs-body-bg);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2.4rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+
+    blockquote {
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      color: #cbd5e1;
+    }
+
+    .badge-soc {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .content { padding: 1.3rem; }
+    }
+  </style>
+</head>
+
+<body class="d-flex">
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <img src="./images/logo.png" class="logo-img" alt="Supraja Technologies Logo"/>
+
+  <button class="btn btn-primary w-100 mb-2" onclick="toggleSidebar()">Toggle Sidebar</button>
+  <button class="btn btn-outline-light w-100" onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<!-- Content -->
+<div class="content container-fluid">
+
+  <!-- TITLE -->
+  <h1>Log-Based Threat Detection & SOC Automation Platform</h1>
+  <p class="fs-5 text-secondary mb-4">
+    An Industry-Oriented Security Operations Center (SOC) Simulation Platform
+  </p>
+
+  <!-- COMPANY -->
+  <div class="section-card">
+    <h3>Organization Details</h3>
+    <table class="table table-bordered">
+      <tr><th>Company Name</th><td>Supraja Technologies</td></tr>
+      <tr><th>Website</th><td><a href="https://suprajatechnologies.com/" target="_blank">https://suprajatechnologies.com</a></td></tr>
+      <tr><th>Company Email</th><td>contact@suprajatechnologies.com</td></tr>
+      <tr><th>Founder & CEO</th><td>Santhosh Chaluvadi</td></tr>
+    </table>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section-card">
+    <h3>Internship & Project Timeline</h3>
+    <table class="table table-striped table-bordered">
+      <tr><th>Internship Start Date</th><td>06 September 2025</td></tr>
+      <tr><th>Internship End Date</th><td>10 January 2026</td></tr>
+      <tr><th>Project Start Date</th><td>16 November 2025</td></tr>
+      <tr><th>Project End Date</th><td>08 January 2026</td></tr>
+      <tr><th>Project Status</th><td><span class="badge badge-soc fs-6">Completed Successfully</span></td></tr>
+    </table>
+  </div>
+
+  <!-- PROJECT DESCRIPTION -->
+  <div class="section-card">
+    <h3>Project Description</h3>
+
+    <p>
+      The <b>Log-Based Threat Detection & SOC Automation Platform</b> is a
+      comprehensive cybersecurity solution designed to simulate the working
+      of a real-world <b>Security Operations Center (SOC)</b>.
+    </p>
+
+    <p>
+      Modern organizations generate massive volumes of logs from web servers,
+      applications, operating systems, APIs, and endpoints. These logs often
+      contain early indicators of cyber attacks, misconfigurations, and abuse.
+      However, in many environments, logs remain underutilized due to lack of
+      centralized analysis, automation, and intelligence-driven correlation.
+    </p>
+
+    <p>
+      This project addresses that gap by building a <b>fully automated SOC
+      pipeline</b> that ingests logs, normalizes them, detects malicious patterns,
+      correlates events, and triggers automated responses.
+    </p>
+
+    <blockquote>
+      The platform is designed to be <b>deterministic, audit-ready, IOC-aware,
+      and enterprise safe</b>, making it suitable for real SOC workflows,
+      internships, and academic evaluations.
+    </blockquote>
+  </div>
+
+  <!-- EXISTING SYSTEM -->
+  <div class="section-card">
+    <h3>Existing System (Before This Project)</h3>
+    <ul>
+      <li>Manual log inspection or basic grep-based searches</li>
+      <li>No real-time monitoring or alerting</li>
+      <li>No centralized severity classification</li>
+      <li>No threat intelligence (IOC) correlation</li>
+      <li>Delayed incident response</li>
+      <li>No automated reporting or evidence preservation</li>
+    </ul>
+  </div>
+
+  <!-- PROPOSED SYSTEM -->
+  <div class="section-card">
+    <h3>Proposed System (This Project)</h3>
+    <ul>
+      <li>Centralized log parsing and normalization</li>
+      <li>OWASP-aligned detection rules (Web & API attacks)</li>
+      <li>Severity classification (Low → Critical)</li>
+      <li>IOC-based threat intelligence enrichment</li>
+      <li>Correlation of events into incidents</li>
+      <li>Automated firewall blocking (policy-controlled)</li>
+      <li>Email alerting for high-risk detections</li>
+      <li>Professional SOC-grade PDF incident reports</li>
+      <li>Live log monitoring and host watchtower</li>
+    </ul>
+  </div>
+
+  <!-- ARCHITECTURE -->
+  <div class="section-card">
+    <h3>System Architecture Overview</h3>
+    <ol>
+      <li>Log Ingestion (Live & Static Logs)</li>
+      <li>Parsing & Normalization Engine</li>
+      <li>Detection Engine (Regex + Severity Map)</li>
+      <li>IOC Reputation & IP Enrichment</li>
+      <li>Correlation & Escalation Logic</li>
+      <li>Response Engine (Firewall, Email, PDF)</li>
+      <li>SOC Dashboard & Analytics</li>
+    </ol>
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="section-card">
+    <h3>Technology Stack & Tools</h3>
+    <table class="table table-bordered">
+      <tr><th>Programming Language</th><td>Python 3.11</td></tr>
+      <tr><th>GUI Framework</th><td>PySide6 (Qt for Python)</td></tr>
+      <tr><th>Detection Techniques</th><td>Regex, OWASP Rule Mapping</td></tr>
+      <tr><th>Threat Intelligence</th><td>FireHOL, AbuseIPDB IOC Feeds</td></tr>
+      <tr><th>Analytics</th><td>TF-IDF, KMeans (Anomaly Detection)</td></tr>
+      <tr><th>Reporting</th><td>ReportLab (PDF Generation)</td></tr>
+      <tr><th>Monitoring</th><td>Live Log Tailer, Process Watchtower</td></tr>
+      <tr><th>Packaging</th><td>PyInstaller (Windows EXE)</td></tr>
+    </table>
+  </div>
+
+  <!-- TEAM -->
+  <div class="section-card">
+    <h3>Development Team</h3>
+    <table class="table table-striped table-bordered">
+      <thead class="table-secondary">
+        <tr>
+          <th>Name</th>
+          <th>Employee ID</th>
+          <th>Role</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Podugu Bala Veera Venkata Sunil</td>
+          <td>ST#IS#7639</td>
+          <td>Lead Developer, SOC Architecture & Bug Fixing</td>
+          <td>bvvsedu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Pakalapati Chandu</td>
+          <td>ST#IS#7637</td>
+          <td>Core Detection Engine Developer & Debugging Specialist</td>
+          <td>chandu.pakalapati@gmail.com</td>
+        </tr>
+        <tr>
+          <td>S N K L Narayana Munganda</td>
+          <td>ST#IS#7646</td>
+          <td>Project Documentation Developer & System Tester</td>
+          <td>narayana.munganda@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="section-card text-center">
+    <span class="badge badge-soc fs-5">
+      Enterprise-Level SOC Automation Project
+    </span>
+  </div>
+
+</div>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+  }
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute(
+      "data-bs-theme",
+      html.getAttribute("data-bs-theme") === "dark" ? "light" : "dark"
+    );
+  }
+</script>
+
+</body>
+</html>
